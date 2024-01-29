@@ -47,8 +47,17 @@ namespace ConsoleUI
 
             // Call each of the drive methods for one car and one motorcycle
 
-            #endregion            
-            Console.ReadLine();
+            #endregion
+            List<Vehicle> vehicleList = new List<Vehicle>();
+            vehicleList.Add(new Car("2015", "Honda", "Accord", 15.8, 30));
+            vehicleList.Add(new Car("2018", "Ford", "Escape", 34, 28));
+            vehicleList.Add(new Motorcycle("2013", "Ural", "Gear-Up", 1100, 30));
+            vehicleList.Add(new Motorcycle("2017", "BMW", "R1200GS Adventure", 882, 40));
+
+            foreach (var vehicle in vehicleList)
+            {
+                vehicle.DisplayInfo();
+            }
         }
     }
 }
